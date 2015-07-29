@@ -35,7 +35,7 @@
     <% current_user.baskets.each do |i| %>
     <%= form_tag("/users/#{current_user.id}/baskets/#{i.id}/add", method: "post") do %>
       <%= text_field_tag, value="#{i.name}" %>
-      <%= hidden_field_tag 'fund_id', "@fund.id" %>
+      <%= hidden_field_tag 'fund_id', @fund.id %>
       <%= submit_tag "Hatch!", class: "button postfix" %>
     <% end %>
     <!-- <form id="add_to_basket" method="post" style="display: inline-block;" action="/users/<%# session[:id] %>/baskets/<%= i.id %>/funds/<%= @fund.id %>"

@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
   private
 
   include AuthenticationConcern
+  include CreatefundConcern
 end

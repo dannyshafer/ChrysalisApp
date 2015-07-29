@@ -1,4 +1,4 @@
-class CreateFundsbaskets < ActiveRecord::Migration
+class CreateFundsBaskets < ActiveRecord::Migration
   def change
     create_table :funds_baskets do |t|
       t.integer :fund_id

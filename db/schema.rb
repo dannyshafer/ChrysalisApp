@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150728225416) do
   end
 
   create_table "funds", force: :cascade do |t|
+    t.integer  "user_id"
     t.string   "morningstar_rating"
     t.string   "name"
     t.string   "symbol"

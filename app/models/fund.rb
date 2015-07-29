@@ -1,3 +1,4 @@
 class Fund < ActiveRecord::Base
-  belongs_to :funds_baskets
+  has_many :funds_baskets
+  belongs_to :users
 end

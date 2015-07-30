@@ -1,9 +1,31 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<br>
+<br>
+<div class="row">
+  <div id="login" style="display: none" class="small-6 small-offset-3 columns">
+    <%= form_tag '/login' do %>
+    <h3>Welcome back!</h3>
+    <p>Username</p>
+    <%= text_field_tag :username %>
 
-<% if current_user %>
-<p>welcome back <%= current_user.username %></p>
-<% end %>
+    <p>Password</p>
+    <%= password_field_tag :password %>
 
+    <%= button_tag "Log in!" %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div id="signup" class="small-6 small-offset-3 columns">
+    <%= form_tag '/signup' do %>
+    <h3>Let's hatch something together</h3>
+    <p>Username</p>
+    <%= text_field_tag :username %>
 
-<%= render "sessions/login" %>
+    <p>Password</p>
+    <%= password_field_tag :password %>
+
+    <%= button_tag "Sign up!" %>
+    <% end %>
+  </div>
+</div>

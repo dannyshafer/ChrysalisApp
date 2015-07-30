@@ -6,8 +6,10 @@ class FundsController < ApplicationController
   end
 
   def show
+    p "made it to the route"
     @fund = current_user.funds.find(params[:id])
-    render "funds/show"
+    p @fund
+    ("funds/show").to_json
   end
 
   def index

@@ -1,5 +1,5 @@
 class BasketsController < ApplicationController
-
+  layout false
   def add_fund
     @current_basket = Basket.find_by(id: params[:basket_id])
     @current_fund = Fund.find_by_id(params[:fund_id].to_i)
@@ -87,6 +87,6 @@ class BasketsController < ApplicationController
     @basket_three_yr_treynor_ratio = @basket_three_yr_treynor_ratio / @fund_names.length
     @basket_three_yr_treynor_ratio_cat = @basket_three_yr_treynor_ratio_cat / @fund_names.length
 
-    render "baskets/basket_summary"
+    render "baskets/summary"
   end
 end

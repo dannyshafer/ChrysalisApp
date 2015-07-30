@@ -30,18 +30,14 @@
 <br>
 <br>
 <div class="row">
-  <div class=" small-12 columns">
+  <div class=" small-6 columns">
     <h4>Add to basket:</h4>
     <% current_user.baskets.each do |i| %>
-    <%= form_tag("/users/#{current_user.id}/baskets/#{i.id}/add", method: "post") do %>
-      <%= text_field_tag, value="#{i.name}" %>
-      <%= hidden_field_tag 'fund_id', @fund.id %>
-      <%= submit_tag "Hatch!", class: "button postfix" %>
-    <% end %>
-    <!-- <form id="add_to_basket" method="post" style="display: inline-block;" action="/users/<%# session[:id] %>/baskets/<%= i.id %>/funds/<%= @fund.id %>"
-      <input type="text" name="<%= i.name %>">
-      <input type="submit" value="<%= i.name %>" class="button">
-    </form> -->
+      <%= form_tag("/users/#{current_user.id}/baskets/#{i.id}/add", method: "post") do %>
+        <%= text_field_tag, value="#{i.name}" %>
+        <%= hidden_field_tag 'fund_id', @fund.id %>
+        <%= submit_tag "Hatch!", class: "button postfix" %>
+      <% end %>
     <% end %>
     <a class="delete button alert" href="/funds/<%= @fund.id %>">Delete</a></div>
 

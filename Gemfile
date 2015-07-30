@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'foundation-rails'
 gem 'nokogiri'
 gem 'bcrypt'
 gem 'rails', '4.2.1'

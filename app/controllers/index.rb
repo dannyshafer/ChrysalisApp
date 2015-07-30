@@ -30,7 +30,7 @@ end
 
 #Sign in
 get '/login' do
-  erb :login
+
 end
 
 post '/login' do
@@ -57,6 +57,6 @@ post '/users' do
 end
 
 get '/logout' do
-  session[:id] = nil
+  session[:user_id] = nil
   redirect '/'
 end
